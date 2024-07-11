@@ -8,6 +8,7 @@ def MyFunction(line_string: str):
 
 
 template = 'vika'
+verification = 0
 pleaseCount = 0
 mainList = list()
 # noinspection PyBroadException
@@ -43,9 +44,11 @@ try:
           for spaseRow in range(string_format[0]):
             if template[pleaseCount] == mainList[spaseRow][spaseColumn]:
               pleaseCount += 1
+              verification += 1
 
+              continue
 
-
+        print(verification)
         mainList.clear()
 
     except Exception:
